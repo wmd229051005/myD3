@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+
+
+<script>
+    var dataset = [3, 6, 9];
+    var p = d3.select("body").selectAll("p");
+    //var update=p.data(dataset);
+    //var enter=update.enter();
+    //update.text(function (d) {
+    //    return d;
+    //});
+    ////enter表示有多余的数据，所以需要给enter添加元素来接受多余的数据进行绑定
+    //enter.append("p").text(function (d) {
+    //    return d;
+    //})
+
+    //简写形式
+    p.data(dataset).enter().append("p").text(function (d) {
+        return d;
+    })
+
+
+</script>
+</body>
+</html>

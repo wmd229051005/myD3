@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+<P>paragraph 1</P>
+<P>paragraph 2</P>
+<P>paragraph 3</P>
+<script>
+    var paragraphs = d3.selectAll("p");
+    alert(paragraphs.empty());
+    alert(paragraphs.node());
+    alert(paragraphs.size());
+</script>
+</body>
+</html>

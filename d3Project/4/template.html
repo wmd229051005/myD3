@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+<script>
+    var dataset = [30, 60, 90];
+    var p = d3.select("body").selectAll("p");
+    var update = p.data(dataset);
+    var enter = update.enter();
+    var exit = update.exit();
+    enter.append(p).text(function (d) {
+        return d;
+    });
+    exit.remove();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+<p>Fire</p>
+<p>Water</p>
+<p>Wind</p>
+<script>
+    var p = d3.select("body").selectAll("p");
+    p.datum(7);
+    console.log(p);
+    console.log(p.datum());
+    p.append("p").text(p.datum());
+
+
+</script>
+</body>
+</html>

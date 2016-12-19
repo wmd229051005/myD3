@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+<script>
+var numbers=[10,13,16,19,2,25];
+var iLeft=d3.bisectLeft(numbers.sort(d3.ascending),18);
+numbers.splice(iLeft,0,99);
+console.log(numbers);
+
+var iRight=d3.bisectRight(numbers.sort(d3.ascending),18);
+numbers.splice(iRight,0,100);
+console.log(numbers);
+
+d3.shuffle(numbers);
+console.log(numbers);
+
+console.log(d3.merge([[1],[2,3]]));
+
+console.log(d3.pairs(numbers));
+
+console.log(d3.range(10));
+
+var c=d3.range(4,20,2);
+console.log(c)
+
+
+var dataset=[
+    {id:1000,color:"red"},
+    {id:1001,color:"blue"},
+    {id:1002,color:"green"}
+];
+var map=d3.map(dataset,function (d) {
+    return d.id;
+});
+map.has(1001);
+map.has(1003);
+map.get(1003);
+
+</script>
+</body>
+</html>

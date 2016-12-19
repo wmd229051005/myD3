@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../d3/d3.js"></script>
+</head>
+<body>
+<p>Car</p>
+<p id="plane">Plane</p>
+<p>Ship</p>
+<script>
+    var body = d3.select("body");
+    body.append("p").text("Train");
+    body.insert("p", "#plane").text("Bike");
+    var plane = d3.select("#plane");
+    plane.remove();
+</script>
+</body>
+</html>
